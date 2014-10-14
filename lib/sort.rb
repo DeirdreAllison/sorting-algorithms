@@ -15,6 +15,9 @@ class Sorting
     y -= 1 while y >= 0 && a[y] > x
     a.insert(y + 1, x)
   end
+
+  def merge_sort(array)
+  end
 end
 
 s = Sorting.new
