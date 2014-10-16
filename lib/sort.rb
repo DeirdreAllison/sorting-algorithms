@@ -23,23 +23,20 @@ class Sorting
   end
 
   def arrayify(list)
-    list.map! { |e| [e]}
+    list.map! { |e| [e] }
   end
 
   def merge_pairs(list)
     list.each_slice(2).map do |l, r|
-    merge(l,r)
+      merge(l, r)
     end
   end
 
-  def merge (l, r)
+  def merge(l, r)
     return l unless r
     result = []
-  while l.first && r.first
-    result.push(l.first <= r.first ? l.shift: r.shift)
-  end
-
-  result += l + r
+    result.push(l.first <= r.first ? l.shift : r.shift) while l.first && r.first
+    result + l + r
   end
 end
 
