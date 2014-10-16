@@ -16,9 +16,33 @@ class Sorting
     a.insert(y + 1, x)
   end
 
-  def merge_sort(array)
+  def merge_sort(list)
+    arrayify(list)
+    list = merge_pairs(list) while list.size  > 1
+    list.first
+  end
+
+  def arrayify(list)
+    list.map! { |e| [e]}
+  end
+
+  def merge_pairs(list)
+    list.each_slice(2).map do |l, r|
+    merge(l,r)
+    end
+  end
+
+  def merge (l, r)
+    return l unless r
+    result = []
+  while l.first && r.first
+    result.push(l.first <= r.first ? l.shift: r.shift)
+  end
+
+  result += l + r
   end
 end
 
 s = Sorting.new
 puts s.insertion_sort([6, 3, 25, 7])
+puts s.merge_sort([6, 3, 25, 7])
