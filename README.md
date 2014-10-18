@@ -1,7 +1,10 @@
-#Insertion Sorting in Ruby
+#Sorting in Ruby
 
-This program is an insertion sorting algorithm in Ruby including tests and benchmark.
+To run, clone the repo and run the file to see examples of:
+*Insertion Sort
+*Merge Sort
 
-To run, clone the repo and run the file.
-
-Benchmarking thanks to Sunny and Javier and algorithm help from MIT.
+Credits:
+*Benchmarking thanks to Sunny and Javier
+*Insertion Sorting algorithm help from MIT
+*Merge Sort help from Javier and class example
