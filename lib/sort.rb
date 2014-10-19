@@ -59,9 +59,24 @@ class Sorting
 
     quicksort(lesser) + [pivot_value] + quicksort(greater)
   end
+
+  def radix_sort(array)
+    max_length = array.max.to_s.length
+
+    max_length.times do |i|
+      bucket = Hash.new { |b, c| b[c] = [] }
+      array.each do |y|
+        digit = (y / 10**i) % 10
+        bucket[digit] << y
+      end
+      array = bucket.values_at(*(0..10)).compact.flatten
+    end
+    array
+  end
 end
 
 s = Sorting.new
 puts s.insertion_sort([6, 3, 25, 7])
 puts s.merge_sort([6, 3, 25, 7])
 puts s.quicksort([6, 3, 25, 7])
+puts s.radix_sort([6, 3, -1, 25, 7])
