@@ -12,3 +12,6 @@ Credits:
 * Merge Sort help from Javier and class example
 * Quicksort help from [this website](http://sandmoose.com/post/59658391296/quicksort-in-ruby)
 * Radix sort help from [this website](https://cheriecodes.wordpress.com/tag/radix-sort/)
+
+License:
+* MIT: [http://deirdre.mit-license.org/](http://deirdre.mit-license.org/)
